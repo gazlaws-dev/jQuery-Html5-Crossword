@@ -13,15 +13,7 @@
 <body>
     
     <h1>Crossword</h1>
-    <h3>Istruzioni</h3>
-    <p>Frecce della tastiera &larr; &uarr; &rarr; &darr; per muoversi tra le caselle nelle quattro direzioni.<br />
-    Tasto tab  ⇥ per spostarsi alla definizione successiva.<br />
-    Tasto dello spazio per cambiare il verso della parola selezionata.<br />
-    Tasto backspace per cancellare il valore della cella e spostarsi in quella precedente.<br />
-    Tasto canc per cancellare il valore della cella senza spostarsi.<br />
-    Cliccare su una definizione per spostarsi direttamente sulle celle interessate.<br />
-    Premere il bottone "check" per controllare con la soluzione.</p>
-    <h3>Instructions</h3>
+   <h3>Instructions</h3>
     <p>Keyboard arrows &larr; &uarr; &rarr; &darr; to move between the cells in the four directions.<br />
     Tab key   ⇥ to move to the next definition.<br />
     Spacebar to change the direction of the selected word.<br />
@@ -30,7 +22,6 @@
     Click on a definition to go to the respective cells.<br />
     Click on "check" to check with the solution.</p>
     <input type="button" id="check" value="check" />
-    <a href="solution.png">See the solution / Vedi la soluzione</a>
     <div id="definitions"></div>
 
 
@@ -49,12 +40,12 @@ $.get("source.php", function(response) {
         crossword_val: cw,
         hor_val: hor,
         ver_val: ver,
-        caption: "September 16, 2010"
+        caption: "September 21, 2018"
     });
     $("#definitions")
-        .append("<h3>Orizzontale / Across</h3>")
+        .append("<h3>Across</h3>")
         .append(html.def[0])
-        .append("<h3>Verticale / Down</h3>")
+        .append("<h3>own</h3>")
         .append(html.def[1])
         .before(html.schema);
     
